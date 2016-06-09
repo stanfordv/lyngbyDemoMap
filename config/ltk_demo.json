@@ -1,0 +1,50 @@
+﻿{ 
+    "text": {
+        "title": "Boligsocialt Landkort",
+        "description": "<p>På Boligsociale Landkort kan du se data over boliger og befolkningen i Lyngby-Taarbæk Kommune samt se udviklingen over tid for de enkelte områder i byen. Data er tilgængeligt for hvert kvartal og vedligeholdes løbende.</p><br><h4>Vejledning</h4><p>Start ved at klikke på knappen \"Tilføj Tema\" og gå på opdagelse i de tilgængelige data. Når du har valgt et tema kan du trykke på en karré for at se statistik eller trykke på \"play\"-knappen for at se en grafisk fremvisning over tid. </p>"
+    },
+    "map": { 
+        "minZoom": 13, 
+        "maxZoom": 20,
+        "zoom": 13,
+        "center": [55.785009560153868,12.510143870963591 ]
+    },
+    "baseLayer": {
+        "URLtemplate": "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "options": {
+            "minZoom": 13,
+            "maxZoom": 20,
+            "attribution": "&copy Lyngby-Taarbæk Kommune"
+        }
+    },
+    "vector": {
+        "13": {"url": "demo-ltkdata/ltkBorder.geojson", "title": "Border"},
+        "12": {"url": "demo-ltkdata/karre_4326.geojson", "title": "Karreer"},
+        "11": {"url": "demo-ltkdata/kvadratnet_4326.geojson", "title": "Kvadratnet"}
+    },
+    "data": [
+        {        
+            "title": "Boligtyper",
+            "description": "Data om boligtyper per område. Nullam eu tempor nunc. Integer fringilla sit amet nisl sed convallis. ",
+            "data": [
+                {
+				"title": "Boligtyper",
+                    "description": "Boligtyper er beregnet ved antal af hver boligtype per område/kvadrat, Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse potenti. Nam felis nisi, blandit id turpis at, ultrices congue est.",
+                   "vector": ["12","11"],
+                    "data": "demo-ltkdata/boligtyper.json",
+                    "col": "antal_samlet",
+				    "colors": [
+                       {"min": 0, "max": 100, "color": "#FFFFCC"},
+                        {"min": 100, "max": 500, "color": "#C2E699"},
+                        {"min": 500, "max": 2000, "color": "#78C679"},
+                        {"min": 2000, "max": 8000, "color": "#31A354"},
+                        {"min": 8000, "max": 20000, "color": "#006837"}
+                    ],
+                    "decimals": 1,
+                    "unit": "pr."
+				}
+            ]
+        }
+		
+    ]
+}
