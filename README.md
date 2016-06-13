@@ -1,6 +1,6 @@
 Bolisocialt Landkort
 ========
-
+This version has been adapted from the Frederiksberg solution and converted to a Lyngby version. The Lyngby version takes a different kind of data: boligtyper. And for now the different data is seen over type rather than time. 
 
 ### Produktet ###
 
